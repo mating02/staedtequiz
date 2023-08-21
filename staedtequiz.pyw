@@ -111,28 +111,28 @@ img1 = ImageTk.PhotoImage(img1res)
 ausgabe = Label(master=fenster, image=img1)
 ausgabe.image = img1
 auswahl = Label(master=fenster, bg='dark blue', fg='white', width=40, text='Welche Stadt ist das?')
+centered_frame = Frame(fenster, bg='orange')
 stadt = StringVar()
-radiob1 = Radiobutton(master=fenster, text='Kiel', variable=stadt, value='german_cities/Kiel.jpg', command=showselected,
+radiob1 = Radiobutton(centered_frame, text='Kiel', variable=stadt, value='german_cities/Kiel.jpg', command=showselected,
                       bg='orange')
-radiob2 = Radiobutton(master=fenster, text='Münster', variable=stadt, value='german_cities/Münster.jpg', command=showselected,
+radiob2 = Radiobutton(centered_frame, text='Münster', variable=stadt, value='german_cities/Münster.jpg', command=showselected,
                       bg='orange')
-radiob3 = Radiobutton(master=fenster, text='Heidelberg', variable=stadt, value='german_cities/Heidelberg.jpg', command=showselected,
+radiob3 = Radiobutton(centered_frame, text='Heidelberg', variable=stadt, value='german_cities/Heidelberg.jpg', command=showselected,
                       bg='orange')
-radiob4 = Radiobutton(master=fenster, text='Berlin', variable=stadt, value='german_cities/Berlin.jpg', command=showselected,
+radiob4 = Radiobutton(centered_frame, text='Berlin', variable=stadt, value='german_cities/Berlin.jpg', command=showselected,
                       bg='orange')
 radiob4.select()
 button = Button(master=fenster, text='Auswählen', command=showresult, font=('Arial', 12), bg='white')
 ueberschrift.pack()
 ausgabe.pack()
 auswahl.pack()
+centered_frame.pack()
 radiob1.pack(anchor=NW, padx=10)
 radiob2.pack(anchor=NW, padx=10)
 radiob3.pack(anchor=NW, padx=10)
 radiob4.pack(anchor=NW, padx=10)
 button.pack()
 fenster.mainloop()
-
-
 
 
 
