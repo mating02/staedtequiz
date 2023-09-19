@@ -88,13 +88,13 @@ def show_text():
     ausgabe2.config(state=NORMAL)  # Enable the widget
     ausgabe2.delete("1.0", END)  # Clear any existing content
     if score > 24:
-        ausgabe2.insert("1.0", "Du hast " + str(score) + "/31 Städten korrekt genannt! DU bist ein echter Patriot!")
+        ausgabe2.insert("1.0", "Du hast " + str(score) + "/32 Städten korrekt genannt! DU bist ein echter Patriot!")
     elif 12 <= score <= 24:
         ausgabe2.insert("1.0", "Du hast " + str(
-            score) + "/31 Städten korrekt genannt! Ein bisschen mehr Integration schadet nicht!")
+            score) + "/32 Städten korrekt genannt! Ein bisschen mehr Integration schadet nicht!")
     else:
         ausgabe2.insert("1.0", "Du hast nur " + str(
-            score) + "/31 Städten korrekt genannt! Vielleicht solltest du lieber auswandern!")
+            score) + "/32 Städten korrekt genannt! Vielleicht solltest du lieber auswandern!")
     ausgabe2.config(state=DISABLED)  # Disable the widget again
     ueberschrift.pack()
     ausgabe2.pack(pady=15)
@@ -133,6 +133,8 @@ radiob3.pack(anchor=NW, padx=10)
 radiob4.pack(anchor=NW, padx=10)
 button.pack()
 fenster.mainloop()
+
+
 
 
 
